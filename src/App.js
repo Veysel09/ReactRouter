@@ -9,6 +9,7 @@ import PersonDetail from "./pages/PersonDetail";
 import Aws from "./pages/Aws";
 import FullStack from "./pages/FullStack";
 import Paths from "./pages/Paths";
+import PrivateRouter from "./pages/PrivateRouter";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
         </Route>
         <Route path="" element={<Contact />} />
+        <Route path="contact" element={ <PrivateRouter/> }></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
