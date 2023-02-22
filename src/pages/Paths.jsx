@@ -1,4 +1,4 @@
-
+import { Link, useNavigate, Outlet } from "react-router-dom";
 
 const Paths = () => {
   const navigate = useNavigate();
@@ -15,10 +15,10 @@ const Paths = () => {
         experts!
       </p>
       <div>
-        <button className="btn btn-success w-50" to="">
-   
+        <Link className="btn btn-success w-50" to="">
+          {/* <Link className="btn btn-success w-50" to="fullstack"> */}
           Fullstack
-        </button>
+        </Link>
         <button
           className="btn btn-warning w-50"
           onClick={() => navigate("aws")}
@@ -26,7 +26,7 @@ const Paths = () => {
           Aws-Devops
         </button>
       </div>
-   
+      <Outlet />
     </div>
   );
 };
