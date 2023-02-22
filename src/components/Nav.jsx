@@ -1,12 +1,30 @@
+Skip to content
+clarusway
+/
+clarusway-full-stack-tr-12-22
+Private
+Code
+Issues
+Pull requests
+Actions
+Projects
+More
+clarusway-full-stack-tr-12-22/react/class-notes/rc11-12_router-example/rc11-12_router-example-inClass/src/components/Nav.jsx /
+@profnoah
+profnoah navlink
+ History
+ 1 contributor
+78 lines (74 sloc)  2.15 KB
 import logo from "../img/logo.png";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand-md navbar-light">
       <div className="container-fluid">
-        <a href="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img src={logo} alt="" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -18,26 +36,54 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
             <li className="nav-item">
-              <a href="/" className="nav-link active" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive && "red",
+                })}
+                to="/"
+                className="nav-link active"
+                aria-current="page"
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <a href="/people" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive && "red",
+                })}
+                to="/people"
+                className="nav-link"
+                aria-current="page"
+              >
                 People
-              </a>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <a href="/paths" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive && "red",
+                })}
+                to="/paths"
+                className="nav-link"
+                aria-current="page"
+              >
                 Paths
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/contact" className="nav-link" aria-current="page">
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive && "red",
+                })}
+                to="/contact"
+                className="nav-link"
+                aria-current="page"
+              >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -47,3 +93,18 @@ function Nav() {
 }
 
 export default Nav;
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+clarusway-full-stack-tr-12-22/Nav.jsx at main · clarusway/clarusway-full-stack-tr-12-22
