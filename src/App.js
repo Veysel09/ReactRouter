@@ -9,13 +9,17 @@ function App() {
   return (
     <>
       <Nav />
-      <Home />
-      <People />
-      <Contact />
-      <NotFound />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="people" element={<People />} />
+        <Route path="people/:id" element={<PersonDetail />} />
+        <Route path="paths" element={<Paths />} />
+        <Route path="" element={<Contact />} />
+      </Routes>
       <Footer />
     </>
   );
 }
+
 
 export default App;
