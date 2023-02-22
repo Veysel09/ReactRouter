@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import PersonDetail from "./pages/PersonDetail";
 import Aws from "./pages/Aws";
 import FullStack from "./pages/FullStack";
+import Paths from "./pages/Paths";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="people/:id" element={<PersonDetail />} />
         <Route path="paths" element={<Paths />} >
           <Route path="aws" element={ <Aws/> } />
+          <Route index element={ <FullStack/> } />
           <Route path="fullstack" element={ <FullStack/> } />
 
 
