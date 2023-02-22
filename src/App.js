@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="people/:id" element={<PersonDetail />} />
         <Route path="paths" element={<Paths />} />
         <Route path="" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
