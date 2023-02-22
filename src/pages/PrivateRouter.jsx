@@ -1,10 +1,11 @@
+import { Outlet, Navigate } from "react-router-dom";
 
 
 
 const PrivateRouter = () => {
-  return (
-    <div>PrivateRouter</div>
-  )
+    const userAuthenticated = true
+  return <div>
+    {userAuthenticated ? <Outlet/> : <Navigate to="Login" /> }</div>;
 }
 
 export default PrivateRouter

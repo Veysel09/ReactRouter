@@ -10,6 +10,7 @@ import Aws from "./pages/Aws";
 import FullStack from "./pages/FullStack";
 import Paths from "./pages/Paths";
 import PrivateRouter from "./pages/PrivateRouter";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -19,21 +20,21 @@ function App() {
         <Route index element={<Home />} />
         <Route path="people" element={<People />} />
         <Route path="people/:id" element={<PersonDetail />} />
-        <Route path="paths" element={<Paths />} >
-          <Route path="aws" element={ <Aws/> } />
-          <Route index element={ <FullStack/> } />
-          <Route path="fullstack" element={ <FullStack/> } />
-
-
+        <Route path="paths" element={<Paths />}>
+          <Route path="aws" element={<Aws />} />
+          <Route index element={<FullStack />} />
+          <Route path="fullstack" element={<FullStack />} />
         </Route>
-        <Route path="" element={<Contact />} />
-        <Route path="contact" element={ <PrivateRouter/> }></Route>
+
+        <Route path="contact" element={<PrivateRouter />}>
+          <Route path="" element={<Contact />} />
+        </Route>
+        <Route path="login" element={ <Login/> } />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
   );
 }
-
 
 export default App;
